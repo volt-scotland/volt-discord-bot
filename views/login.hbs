@@ -1,0 +1,57 @@
+<script src="/js/login.js"></script>
+
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="/images/voltlogo-w.png" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+</nav>
+<div class="container pt-5">
+
+    <div id="login-warning" class="columns">
+        <div class="column is-one-third">&nbsp;</div>
+
+        <div class="column is-one-third">
+            <div class="notification is-danger">
+                <button onclick="document.getElementById('login-warning').remove()" class="delete"></button>
+                This is a Volt Intranet Website. It's usage is intended only by people from Volt Europa.<br/>
+                If you're not from Volt Europa and you are searching for our website, you can reach it <a href="https://volteuropa.org">here</a>.
+            </div>
+        </div>
+
+        <div class="column is-one-third">&nbsp;</div>
+    </div>
+    <div class="columns">
+        <div class="column is-one-third">&nbsp;</div>
+
+        <div class="column is-one-third">
+            <article class="message is-primary">
+                <div class="message-header">
+                    <p>Log-in</p>
+                </div>
+                <div class="message-body has-text-centered">
+                    <button onclick="doLogin()" class="button is-primary" disabled id="btnLogin">Volt Europa Log-in</button>
+                </div>
+            </article>
+        </div>
+
+        <div class="column is-one-third">&nbsp;</div>
+    </div>
+
+    <div id="modalError" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="notification is-danger">
+                <button onclick="document.querySelector('#modalError').classList.remove('is-active')" class="delete"></button>
+                <span data-name="content"></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<script>function toggleBurger() {
+    const burger = document.querySelector('#navbarMenuHeroABurger');
+    const nav = document.querySelector('#navbarMenuHeroA');
+    burger.classList.toggle('is-active');
+    nav.classList.toggle('is-active');
+    console.log('burger clicked');
+}</script>
+<section id="indexHero" class="hero is-primary is-fullheight is-index-hero">
+    <div class="hero-head">
+        <nav class="navbar is-primary">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item">
+                        <img src="/images/voltlogo.png" alt="Logo" style="max-height: 28px">
+                    </a>
+                    <span id="navbarMenuHeroABurger" class="navbar-burger burger" data-target="navbarMenuHeroA"
+                          onclick="toggleBurger()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                    <div class="navbar-end">
+                        <span class="navbar-item">
+                          <a href="/login" class="button is-primary">
+                            <span class="icon">
+                              <i class="fas fa-user-lock"></i>
+                            </span>
+                            <span>Login</span>
+                          </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                {{title}}
+            </h1>
+            <h2 class="subtitle">
+                Where the good stuff is
+            </h2>
+        </div>
+    </div>
+</section>
